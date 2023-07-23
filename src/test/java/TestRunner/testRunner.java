@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-	features = ("C:/Users/prana/git/repository/GG-Framework/src/test/resouces/feature"),
-	glue = ("stepDefinition"),
-	plugin = {"pretty" , "junit:target/junitReport/report.xml"},
+	features = ("src/test/resouces/feature"),
+	glue = {"StepDefinations","Generic"},
+	plugin = {"pretty" , "html:target/cucumber-reports/reports.html"},
 	tags = ""
 		
 		
