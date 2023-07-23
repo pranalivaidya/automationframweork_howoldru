@@ -1,4 +1,4 @@
-package stepDefinition;
+package Generic;
 
 import java.io.IOException;
 

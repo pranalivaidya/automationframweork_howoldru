@@ -1,4 +1,4 @@
-package stepDefinition;
+package StepDefinations;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Generic.BaseClassImp;
+import Generic.SetUpAndTearDown;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -143,7 +145,7 @@ public class HowOldAreYouPage extends BaseClassImp {
         int calculatedAge=current_Year-enteredYearInt;
         
 		String ageIs = CalculatedAge.getAttribute("textContent");
-		
+		SetUpAndTearDown.scenario.log("Calculated Age Is : "+String.valueOf(calculatedAge));
 		assertEquals(ageIs, "Your age is " + String.valueOf(calculatedAge));
 
 	}
@@ -152,6 +154,7 @@ public class HowOldAreYouPage extends BaseClassImp {
 	public void helloText(String name) {
 		BaseClassImp.waitFor(10);
 		System.out.println("Calculated Age is : " + helloText.getAttribute("textContent"));
+		SetUpAndTearDown.scenario.log("Your Name : "+helloText.getAttribute("textContent"));
 		assertEquals(helloText.getAttribute("textContent"), "Hello " + name + "!");
 
 	}
